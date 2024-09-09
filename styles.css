@@ -1,100 +1,145 @@
-body
-{
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
 }
-.register{
-    background: -webkit-linear-gradient(left, #d8810f, #cc380b);
-    margin-top: 3%;
-    padding: 3%;
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f2f5;
 }
-.register-left{
+
+.container {
+    display: flex;
+    width: 1000px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-section {
+    flex: 1;
+    background: linear-gradient(135deg, #FF5F6D, #FFC371);
+    color: white;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    color: #fff;
-    margin-top: 4%;
 }
-.register-left input{
+
+.welcome-section h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.welcome-section p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+.login-btn {
+    background-color: #fff;
+    color: #FF5F6D;
     border: none;
-    border-radius: 1.5rem;
-    padding: 2%;
-    width: 60%;
-    background: #f8f9fa;
-    font-weight: bold;
-    color: #b63a29;
-    margin-top: 30%;
-    margin-bottom: 3%;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 30px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
-.register-right{
-    background: #f8f9fa;
-    border-top-left-radius: 10% 50%;
-    border-bottom-left-radius: 10% 50%;
-}
-.register-left img{
-    margin-top: 15%;
-    margin-bottom: 5%;
-    width: 25%;
-    -webkit-animation: mover 2s infinite  alternate;
-    animation: mover 1s infinite  alternate;
-}
-@-webkit-keyframes mover {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-20px); }
-}
-@keyframes mover {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-20px); }
-}
-.register-left p{
-    font-weight: lighter;
-    padding: 12%;
-    margin-top: -9%;
-}
-.register .register-form{
-    padding: 10%;
-    margin-top: 10%;
-}
-.btnRegister{
-    float: right;
-    margin-top: 10%;
-    border: none;
-    border-radius: 1.5rem;
-    padding: 2%;
-    background: #b63a29;
+
+.login-btn:hover {
+    background-color: #FFC371;
     color: #fff;
-    font-weight: 600;
-    width: 50%;
+}
+
+.form-section {
+    flex: 1.5;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.toggle-btns {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.toggle-btn {
+    border: none;
+    background-color: transparent;
+    color: #FF5F6D;
+    font-size: 1.2rem;
     cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
 }
-.register .nav-tabs{
-    margin-top: 3%;
+
+.toggle-btn.active {
+    background-color: #FF5F6D;
+    color: white;
+}
+
+.toggle-btn:hover {
+    background-color: #FFC371;
+    color: white;
+}
+
+form {
+    width: 100%;
+}
+
+form h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    border-radius: 12px;
+}
+
+.form-group input, .form-group select {
+    width: 48%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    font: Helvetica;
+}
+
+.gender-group {
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.gender-group label {
+    margin-left: 20px;
+}
+
+.register-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #FF5F6D;
     border: none;
-    background: #b63a29;
-    border-radius: 1.5rem;
-    width: 28%;
-    float: right;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
-.register .nav-tabs .nav-link{
-    padding: 2%;
-    height: 34px;
-    font-weight: 600;
-    color: #fff;
-    border-top-right-radius: 1.5rem;
-    border-bottom-right-radius: 1.5rem;
-}
-.register .nav-tabs .nav-link:hover{
-    border: none;
-}
-.register .nav-tabs .nav-link.active{
-    width: 100px;
-    color: #b63a29;
-    border: 2px solid #b63a29;
-    border-top-left-radius: 1.5rem;
-    border-bottom-left-radius: 1.5rem;
-}
-.register-heading{
-    text-align: center;
-    margin-top: 8%;
-    margin-bottom: -15%;
-    color: #495057;
+
+.register-btn:hover {
+    background-color: #FFC371;
 }
